@@ -11,8 +11,8 @@ hero:
     alt: logo
   actions:
     - theme: brand
-      text: 进入文档
-      link: /docs/page-load/lazyload
+      text: 代码实操
+      link: /docs/coding/page-load/lazyload
 
 # features:
 #   - title: Card

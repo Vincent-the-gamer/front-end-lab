@@ -56,6 +56,10 @@ export default defineConfig({
     config: (md) => {
       md.use(ImagePlugin) 
     },
+    // 图片懒加载
+    image: {
+      lazyLoading: true
+    }
   },
   lastUpdated: true,
 })
