@@ -1,5 +1,5 @@
 export default {
-  "/docs/coding": [
+  '/docs/coding': [
     {
       text: '代码实操',
       collapsed: false,
@@ -9,12 +9,12 @@ export default {
           collapsed: true,
           items: [
             {
-              text: "懒加载",
-              link: "/docs/coding/page-load/lazyload"
-            }
-          ]
+              text: '懒加载',
+              link: '/docs/coding/page-load/lazyload',
+            },
+          ],
         },
       ],
     },
-  ]
+  ],
 }

@@ -2,8 +2,8 @@ import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
 import { config } from './configs'
 import { docsConfig } from './docs'
-import { ImagePlugin } from './plugins/markdown/image' 
 import useBaseUrl from './hooks/useBaseUrl'
+import { ImagePlugin } from './plugins/markdown/image'
 
 const baseUrl = useBaseUrl()
 
@@ -37,7 +37,7 @@ export default defineConfig({
   },
   head: [
     // favicon.ico
-    ['link', { rel: 'icon', href: `${baseUrl}/favicon.ico`}],
+    ['link', { rel: 'icon', href: `${baseUrl}/favicon.ico` }],
     // others
     ['link', { rel: 'icon', href: '/logo/json.svg' }],
   ],
@@ -47,19 +47,19 @@ export default defineConfig({
       lang: 'en',
       link: '/',
       ...config,
-    }
+    },
   },
   markdown: {
     codeTransformers: [
       transformerTwoslash(),
     ],
     config: (md) => {
-      md.use(ImagePlugin) 
+      md.use(ImagePlugin)
     },
     // 图片懒加载
     image: {
-      lazyLoading: true
-    }
+      lazyLoading: true,
+    },
   },
   lastUpdated: true,
 })

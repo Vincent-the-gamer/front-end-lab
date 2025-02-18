@@ -10,7 +10,7 @@ export const config: LocaleSpecificConfig<DefaultTheme.Config> = {
     nav: getNavs(),
     sidebar,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Vincent-the-gamer/vitepress-starter' },
+      { icon: 'github', link: 'https://github.com/Vincent-the-gamer/front-end-lab' },
     ],
     docFooter: {
       prev: '← 上一篇',

@@ -11,7 +11,6 @@
 > [!NOTE]
 > To configure base url, modify `contents/.vitepress/hooks/useBaseUrl.ts`.
 
-
 # Dev
 
 <pre align='center'>
