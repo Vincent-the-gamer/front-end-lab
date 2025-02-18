@@ -1,7 +1,6 @@
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
-import { enConfig } from './configs/en'
-import { zhHansConfig } from './configs/zh_hans'
+import { config } from './configs'
 import { docsConfig } from './docs'
 import { ImagePlugin } from './plugins/markdown/image' 
 import useBaseUrl from './hooks/useBaseUrl'
@@ -16,7 +15,7 @@ export default defineConfig({
       provider: 'local',
       options: {
         locales: {
-          zh_hans: {
+          root: {
             translations: {
               button: {
                 buttonText: '搜索文档',
@@ -40,21 +39,15 @@ export default defineConfig({
     // favicon.ico
     ['link', { rel: 'icon', href: `${baseUrl}/favicon.ico`}],
     // others
-    ['link', { rel: 'icon', href: '/logo/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo/json.svg' }],
   ],
   locales: {
     root: {
       label: 'English',
       lang: 'en',
       link: '/',
-      ...enConfig,
-    },
-    zh_hans: {
-      label: '简体中文',
-      lang: 'zh_hans',
-      link: '/zh_hans/',
-      ...zhHansConfig,
-    },
+      ...config,
+    }
   },
   markdown: {
     codeTransformers: [

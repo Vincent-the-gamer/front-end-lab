@@ -1,4 +1,4 @@
 export const docsConfig = {
-  title: 'VitePress Starter',
-  description: 'Opinionated VitePress Starter Template.',
+  title: '前端实验室',
+  description: '前端理论+实操文档',
 }

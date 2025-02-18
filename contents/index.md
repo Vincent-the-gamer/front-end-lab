@@ -1,22 +1,22 @@
 ---
 layout: home
-title: "Main Page"
+title: "主页"
 
 hero:
-  name: "VitePress Starter"
-  text: "Opinionated VitePress Starter Template"
-  tagline: "Starts a VitePress project with more features than the official project starter."
+  name: "前端实验室"
+  text: ""
+  tagline: "前端理论+实操文档"
   image:
     src: "/logo/logo.png"
     alt: logo
   actions:
     - theme: brand
-      text: Get Started
-      link: /page
+      text: 进入文档
+      link: /docs/page-load/lazyload
 
-features:
-  - title: Card
-    details: This is a card.
-    icon:
-      src: "/imgs/card.jpg"
+# features:
+#   - title: Card
+#     details: This is a card.
+#     icon:
+#       src: "/imgs/card.jpg"
 ---
