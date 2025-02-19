@@ -5,12 +5,12 @@ export default {
       collapsed: false,
       items: [
         {
-          text: '前端页面加载',
+          text: '前端性能优化',
           collapsed: true,
           items: [
             {
-              text: '懒加载',
-              link: '/docs/coding/page-load/lazyload',
+              text: '图片懒加载',
+              link: '/docs/coding/optimization/lazyload',
             },
           ],
         },

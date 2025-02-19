@@ -12,7 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 代码实操
-      link: /docs/coding/page-load/lazyload
+      link: /docs/coding/optimization/lazyload
+    - theme: alt
+      text: 计算机八股文网址收藏
+      link: /docs/bagu/bagu-collection
 
 # features:
 #   - title: Card

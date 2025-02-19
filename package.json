@@ -15,8 +15,8 @@
     "dep": "taze major"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.2.1",
-    "@shikijs/vitepress-twoslash": "^2.4.2",
+    "@antfu/eslint-config": "^4.3.0",
+    "@shikijs/vitepress-twoslash": "^3.0.0",
     "@types/node": "^22.13.4",
     "eslint": "^9.20.1",
     "eslint-plugin-format": "^1.0.1",
