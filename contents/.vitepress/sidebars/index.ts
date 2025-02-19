@@ -12,6 +12,10 @@ export default {
               text: '图片懒加载',
               link: '/docs/coding/optimization/lazyload',
             },
+            {
+              text: 'Sprite精灵图',
+              link: '/docs/coding/optimization/sprite',
+            },
           ],
         },
       ],

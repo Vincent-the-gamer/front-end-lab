@@ -35,7 +35,7 @@ lastUpdated: true
 
 兼容性：
 
-![](/imgs/coding/page-load/1-comp.png)
+![](/imgs/coding/optimization/lazyload/1-comp.png)
 
 缺点:
 
@@ -53,7 +53,7 @@ lastUpdated: true
 
 该api返回值是一个 DOMRect对象，拥有left, top, right, bottom, x, y, width, 和 height属性
 
-![](/imgs/coding/page-load/element-box-diagram.png)
+![](/imgs/coding/optimization/lazyload/element-box-diagram.png)
 
 > [!IMPORTANT]
 > 此处的right是元素右边界与视口左部的距离，bottom是元素下边界距离视口顶部的距离，而不是css属性中某些position的同名属性，注意区分。
