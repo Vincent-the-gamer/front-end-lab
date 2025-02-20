@@ -28,7 +28,7 @@ export default {
       items: [
         {
           text: '通用概念',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '敏捷开发',
@@ -38,7 +38,13 @@ export default {
         },
         {
           text: 'Java八股文',
-          link: '/docs/bagu/java-bagu/java-se',
+          collapsed: true,
+          items: [
+            {
+              text: 'Java SE',
+              link: '/docs/bagu/java-bagu/java-se'
+            }
+          ]
         },
       ],
     },

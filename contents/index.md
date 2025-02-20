@@ -15,7 +15,7 @@ hero:
       link: /docs/coding/optimization/lazyload
     - theme: alt
       text: 八股文
-      link: /docs/bagu/java-bagu/java-se
+      link: /docs/bagu/common-theories/agile-dev
 
 # features:
 #   - title: Card
