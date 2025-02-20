@@ -27,6 +27,16 @@ export default {
       collapsed: false,
       items: [
         {
+          text: '通用概念',
+          collapsed: true,
+          items: [
+            {
+              text: '敏捷开发',
+              link: '/docs/bagu/common-theories/agile-dev'
+            }
+          ]
+        },
+        {
           text: 'Java八股文',
           link: '/docs/bagu/java-bagu/java-se',
         },
