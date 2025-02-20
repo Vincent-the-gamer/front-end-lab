@@ -19,9 +19,9 @@
 
 ```html
 <div style="
-background-image: url('/imgs/coding/optimization/sprite/sprite-2.png'); 
-background-size: initial; 
-width: 80px; 
+background-image: url('/imgs/coding/optimization/sprite/sprite-2.png');
+background-size: initial;
+width: 80px;
 height: 80px;
 background-position: 5px -18px;
 " />
@@ -30,18 +30,18 @@ background-position: 5px -18px;
 效果：
 
 <div style="
-background-image: url('/imgs/coding/optimization/sprite/sprite-2.png'); 
-background-size: initial; 
-width: 80px; 
+background-image: url('/imgs/coding/optimization/sprite/sprite-2.png');
+background-size: initial;
+width: 80px;
 height: 80px;
 background-position: 5px -18px;
 " />
 
 ```html
 <div style="
-background-image: url('/imgs/coding/optimization/sprite/sprite-2.png'); 
-background-size: initial; 
-width: 80px; 
+background-image: url('/imgs/coding/optimization/sprite/sprite-2.png');
+background-size: initial;
+width: 80px;
 height: 80px;
 scale: 0.8;
 background-position: -500px -18px;
@@ -51,9 +51,9 @@ background-position: -500px -18px;
 效果：
 
 <div style="
-background-image: url('/imgs/coding/optimization/sprite/sprite-2.png'); 
-background-size: initial; 
-width: 80px; 
+background-image: url('/imgs/coding/optimization/sprite/sprite-2.png');
+background-size: initial;
+width: 80px;
 height: 80px;
 scale: 0.8;
 background-position: -500px -18px;

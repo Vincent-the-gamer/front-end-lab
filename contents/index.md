@@ -14,8 +14,8 @@ hero:
       text: 代码实操
       link: /docs/coding/optimization/lazyload
     - theme: alt
-      text: 计算机八股文网址收藏
-      link: /docs/bagu/bagu-collection
+      text: 八股文
+      link: /docs/bagu/java-bagu/java-se
 
 # features:
 #   - title: Card

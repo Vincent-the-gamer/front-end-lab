@@ -2,11 +2,10 @@ export default {
   '/docs/coding': [
     {
       text: '代码实操',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: '前端性能优化',
-          collapsed: true,
           items: [
             {
               text: '图片懒加载',
@@ -19,6 +18,24 @@ export default {
           ],
         },
       ],
+    },
+  ],
+
+  '/docs/bagu/': [
+    {
+      text: '精选八股文',
+      collapsed: false,
+      items: [
+        {
+          text: 'Java八股文',
+          link: '/docs/bagu/java-bagu/java-se',
+        },
+      ],
+    },
+    {
+      text: '其它计算机八股文网址收藏',
+      collapsed: true,
+      link: '/docs/bagu/bagu-collection',
     },
   ],
 }
