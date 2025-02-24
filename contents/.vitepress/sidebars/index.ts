@@ -32,9 +32,19 @@ export default {
           items: [
             {
               text: '敏捷开发',
-              link: '/docs/bagu/common-theories/agile-dev'
-            }
-          ]
+              link: '/docs/bagu/common-theories/agile-dev',
+            },
+          ],
+        },
+        {
+          text: '前端八股文',
+          collapsed: true,
+          items: [
+            {
+              text: '前端响应式布局',
+              link: '/docs/bagu/frontend-bagu/reactive-layout',
+            },
+          ],
         },
         {
           text: 'Java八股文',
@@ -42,9 +52,9 @@ export default {
           items: [
             {
               text: 'Java SE',
-              link: '/docs/bagu/java-bagu/java-se'
-            }
-          ]
+              link: '/docs/bagu/java-bagu/java-se',
+            },
+          ],
         },
       ],
     },

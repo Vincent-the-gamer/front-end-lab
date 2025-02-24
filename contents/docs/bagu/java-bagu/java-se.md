@@ -81,6 +81,7 @@ Maven引入：
 ```
 
 使用方法：
+
 ```java
 class Test {
     private int a;
@@ -98,7 +99,6 @@ public class JOLTest {
 
 通过这个方法来查看boolean所占字节最靠谱。
 
-
 ### 2. 引用数据类型
 
 1. 类（class）
@@ -110,4 +110,3 @@ public class JOLTest {
 当把一个范围较小的数值或变量赋给另外一个范围较大的变量时，会进行自动类型转换；反之，需要强制转换。
 
 ![zhuanhuan](/imgs/bagu/java-se/zhuanhuan.png)
-
