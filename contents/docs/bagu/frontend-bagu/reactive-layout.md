@@ -279,85 +279,85 @@ body {
 
 - 对于设计稿的尺寸转换为单位，使用`sass/scss`函数编译
 
-    ```scss
-    //iPhone 6尺寸作为设计稿基准
-    $vm_base: 375; 
-    @function vw($px) {
-        @return ($px / 375) * 100vw;
-    }
-    ```
+  ```scss
+  //iPhone 6尺寸作为设计稿基准
+  $vm_base: 375;
+  @function vw($px) {
+    @return ($px / 375) * 100vw;
+  }
+  ```
 
 - 无论是文本还是布局宽度、间距等都使用vw作为单位
 
-    ```scss
-    .mod_nav {
-        background-color: #fff;
-        &_list {
-            display: flex;
-            padding: vm(15) vm(10) vm(10); // 内间距
-            &_item {
-                flex: 1;
-                text-align: center;
-                font-size: vm(10); // 字体大小
-                &_logo {
-                    display: block;
-                    margin: 0 auto;
-                    width: vm(40); // 宽度
-                    height: vm(40); // 高度
-                    img {
-                        display: block;
-                        margin: 0 auto;
-                        max-width: 100%;
-                    }
-                }
-                &_name {
-                    margin-top: vm(2);
-                }
-            }
+  ```scss
+  .mod_nav {
+    background-color: #fff;
+    &_list {
+      display: flex;
+      padding: vm(15) vm(10) vm(10); // 内间距
+      &_item {
+        flex: 1;
+        text-align: center;
+        font-size: vm(10); // 字体大小
+        &_logo {
+          display: block;
+          margin: 0 auto;
+          width: vm(40); // 宽度
+          height: vm(40); // 高度
+          img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+          }
         }
+        &_name {
+          margin-top: vm(2);
+        }
+      }
     }
-    ```
+  }
+  ```
 
 - 1物理像素线（也就是普通屏幕下1px,高清屏幕下0.5px的情况）采用`transform: scale()`实现
 
-    ```scss
-    .mod_grid {
-        position: relative;
-        &::after {
-            // 实现1物理像素的下边框线
-            content: '';
-            position: absolute;
-            z-index: 1;
-            pointer-events: none;
-            background-color: #ddd;
-            height: 1px;
-            left: 0;
-            right: 0;
-            top: 0;
-            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-                -webkit-transform: scaleY(0.5);
-                -webkit-transform-origin: 50% 0%;
-            }
-        }
-        ...
-    }
-    ```
+  ```scss
+  .mod_grid {
+      position: relative;
+      &::after {
+          // 实现1物理像素的下边框线
+          content: '';
+          position: absolute;
+          z-index: 1;
+          pointer-events: none;
+          background-color: #ddd;
+          height: 1px;
+          left: 0;
+          right: 0;
+          top: 0;
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+              -webkit-transform: scaleY(0.5);
+              -webkit-transform-origin: 50% 0%;
+          }
+      }
+      ...
+  }
+  ```
 
 - 对于需要保持宽高比的图，应该用`padding-top`实现
 
 ```scss
 .mod_banner {
-    position: relative;
-    padding-top: percentage(100/700); // 使用padding-top
-    height: 0;
-    overflow: hidden;
-    img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        left: 0;
-        top: 0; 
-    }
+  position: relative;
+  padding-top: percentage(100/700); // 使用padding-top
+  height: 0;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 ```
 
@@ -372,24 +372,24 @@ body {
 // rem 单位换算：定为 75px 只是方便运算，750px-75px、640-64px、1080px-108px，如此类推
 $vm_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
 @function rem($px) {
-     @return ($px / $vm_fontsize ) * 1rem;
+  @return ($px / $vm_fontsize) * 1rem;
 }
 // 根元素大小使用 vw 单位
 $vm_design: 750;
 html {
-    font-size: ($vm_fontsize / ($vm_design / 2)) * 100vw; 
-    // 同时，通过Media Queries 限制根元素最大最小值
-    @media screen and (max-width: 320px) {
-        font-size: 64px;
-    }
-    @media screen and (min-width: 540px) {
-        font-size: 108px;
-    }
+  font-size: ($vm_fontsize / ($vm_design / 2)) * 100vw;
+  // 同时，通过Media Queries 限制根元素最大最小值
+  @media screen and (max-width: 320px) {
+    font-size: 64px;
+  }
+  @media screen and (min-width: 540px) {
+    font-size: 108px;
+  }
 }
 // body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小
 body {
-    max-width: 540px;
-    min-width: 320px;
+  max-width: 540px;
+  min-width: 320px;
 }
 ```
 
@@ -406,13 +406,13 @@ body {
 
 ```css
 img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
 ```
 
-inline-block 元素相对于它周围的内容以内联形式呈现，但与内联不同的是，这种情况下我们可以设置宽度和高度。 
+inline-block 元素相对于它周围的内容以内联形式呈现，但与内联不同的是，这种情况下我们可以设置宽度和高度。
 
 max-width保证了图片能够随着容器的进行等宽扩充（即保证所有图片最大显示为其自身的 100%。此时，如果包含图片的元素比图片固有宽度小，图片会缩放占满最大可用空间），而height为auto可以保证图片进行等比缩放而不至于失真。如果是背景图片的话要灵活运用background-size属性。
 
@@ -433,11 +433,11 @@ max-width保证了图片能够随着容器的进行等宽扩充（即保证所�
 #### 使用background-image
 
 ```css
-.banner{
+.banner {
   background-image: url(/static/large.jpg);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   background-image: url(/static/small.jpg);
 }
 ```

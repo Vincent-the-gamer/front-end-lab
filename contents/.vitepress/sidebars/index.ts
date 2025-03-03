@@ -41,8 +41,31 @@ export default {
           collapsed: true,
           items: [
             {
-              text: '前端响应式布局',
-              link: '/docs/bagu/frontend-bagu/reactive-layout',
+              text: 'CSS',
+              items: [
+                {
+                  text: '前端响应式布局',
+                  link: '/docs/bagu/frontend-bagu/reactive-layout',
+                },
+              ],
+            },
+            {
+              text: '浏览器',
+              items: [
+                {
+                  text: '渐进增强和优雅降级',
+                  link: '/docs/bagu/frontend-bagu/prog-enhance',
+                },
+              ],
+            },
+            {
+              text: 'HTML',
+              items: [
+                {
+                  text: 'HTML5 Drag API',
+                  link: '/docs/bagu/frontend-bagu/drag-api',
+                },
+              ],
             },
           ],
         },
