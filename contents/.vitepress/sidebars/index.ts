@@ -45,7 +45,19 @@ export default {
               items: [
                 {
                   text: '前端响应式布局',
-                  link: '/docs/bagu/frontend-bagu/reactive-layout',
+                  link: '/docs/bagu/frontend-bagu/css/reactive-layout',
+                },
+                {
+                  text: 'CSS选择器',
+                  link: '/docs/bagu/frontend-bagu/css/selector',
+                },
+                {
+                  text: '属性继承',
+                  link: '/docs/bagu/frontend-bagu/css/inherit',
+                },
+                {
+                  text: 'display属性',
+                  link: '/docs/bagu/frontend-bagu/css/display',
                 },
               ],
             },
@@ -54,7 +66,7 @@ export default {
               items: [
                 {
                   text: '渐进增强和优雅降级',
-                  link: '/docs/bagu/frontend-bagu/prog-enhance',
+                  link: '/docs/bagu/frontend-bagu/browser/prog-enhance',
                 },
               ],
             },
@@ -63,7 +75,7 @@ export default {
               items: [
                 {
                   text: 'HTML5 Drag API',
-                  link: '/docs/bagu/frontend-bagu/drag-api',
+                  link: '/docs/bagu/frontend-bagu/html/drag-api',
                 },
               ],
             },
