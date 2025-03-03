@@ -16,3 +16,9 @@
 <pre align='center'>
 pnpm run serve
 </pre>
+
+# Build
+
+<pre align='center'>
+pnpm run build
+</pre>
