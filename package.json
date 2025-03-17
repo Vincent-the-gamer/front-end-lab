@@ -1,18 +1,23 @@
 {
-  "name": "vitepress-starter",
+  "name": "front-end-lab",
   "type": "module",
   "version": "1.0.0",
   "description": "♥️ Opinionated Vitepress Template ♥️",
   "author": "",
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "frontend"
+  ],
   "scripts": {
     "serve": "vitepress dev contents",
-    "build": "vitepress build contents",
+    "build": "pnpm run wasm:build && vitepress build contents && pnpm run copy",
     "preview": "vitepress preview contents",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "dep": "taze major"
+    "dep": "taze major",
+    "copy": "cp wasm/output contents/.vitepress/dist",
+    "wasm:dev": "wasm-pack build ./wasm --target web --out-dir output",
+    "wasm:build": "asm-pack build ./wasm --release --target web --out-dir output"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
@@ -23,12 +28,18 @@
     "medium-zoom": "^1.1.0",
     "simple-git-hooks": "^2.11.1",
     "taze": "^18.6.0",
+    "unocss": "66.1.0-beta.5",
     "vite": "^6.2.0",
+    "vite-plugin-top-level-await": "^1.5.0",
+    "vite-plugin-wasm": "^3.4.1",
     "vitepress": "^2.0.0-alpha.3"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
       "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "@swc/core"
     ]
   },
   "simple-git-hooks": {

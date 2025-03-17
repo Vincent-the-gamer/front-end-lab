@@ -4,8 +4,11 @@ export default antfu({
   typescript: true,
   vue: true,
   ignores: [
-    '**/fixtures',
+    'target',
     'node_modules',
+    'Cargo.lock',
+    '**/Cargo.toml',
+    '**/*.rs',
   ],
   formatters: {
     /**

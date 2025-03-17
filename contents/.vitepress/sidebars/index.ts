@@ -17,6 +17,15 @@ export default {
             },
           ],
         },
+        {
+          text: '用Rust刷LeetCode',
+          items: [
+            {
+              text: '13.罗马数字转整数',
+              link: '/docs/coding/leetcode/romanToInt',
+            },
+          ],
+        },
       ],
     },
   ],

@@ -4,3 +4,7 @@
 cache
 node_modules
 dist
+**/pkg
+**/output
+**/target
+**/index.node

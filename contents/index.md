@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 八股文
       link: /docs/bagu/common-theories/agile-dev
+    - theme: alt
+      text: 用Rust刷LeetCode
+      link: /docs/coding/leetcode/
 
 # features:
 #   - title: Card
