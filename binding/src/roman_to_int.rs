@@ -1,11 +1,11 @@
-// 罗马数字字符串 转 数字(int32)
-fn get_bytes_array(s: String) -> Vec<u8> {
-    let bytes = s.as_bytes();
-    bytes.to_owned()
-}
-
 fn get_value(s: &str) -> i32 {
     let result: i32 = match s {
+        "原" => 4,
+        "神" => 9,
+        "启" => 40,
+        "动" => 90,
+        "蔚" => 400,
+        "来" => 900,
         "I" => 1,
         "V" => 5,
         "X" => 10,
@@ -28,10 +28,10 @@ pub fn roman_to_int_binding(s: String) -> i32 {
                      .replace("CD", "蔚")
                      .replace("CM", "来");
 
-    let bytes_array = get_bytes_array(s);
     let mut result: i32 = 0;
-    for (_, &val) in bytes_array.iter().enumerate() {
-        let val_string = val.to_string();
+
+    for char in s.chars() {
+        let val_string = char.to_string();
         let val = val_string.as_str();
         result += get_value(val);
     }

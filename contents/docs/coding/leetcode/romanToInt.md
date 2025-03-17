@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-import { ref, inject } from "vue"
+import { ref, onMounted } from "vue"
+import init, { romanToInt } from "../../../../wasm/output/wasm.js"
 
-const romanToInt = inject("romanToInt")
+onMounted(() => {
+    init().then()
+})
 
 const romanNumberStr = ref<string>()
 const result = ref<number>()
 
 function romanToIntFunc() {
-    console.log(romanToInt)
     result.value = romanToInt(romanNumberStr.value)
 }
 </script>
@@ -53,6 +55,7 @@ C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
 输入: s = "LVIII"
 输出: 58
 解释: L = 50, V= 5, III = 3.
+
 示例 5:
 
 输入: s = "MCMXCIV"
@@ -69,14 +72,14 @@ IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 �
 
 ## 实战
 ```rust
-// 罗马数字字符串 转 数字(int32)
-fn get_bytes_array(s: String) -> Vec<u8> {
-    let bytes = s.as_bytes();
-    bytes.to_owned()
-}
-
 fn get_value(s: &str) -> i32 {
     let result: i32 = match s {
+        "原" => 4,
+        "神" => 9,
+        "启" => 40,
+        "动" => 90,
+        "蔚" => 400,
+        "来" => 900,
         "I" => 1,
         "V" => 5,
         "X" => 10,
@@ -90,7 +93,7 @@ fn get_value(s: &str) -> i32 {
     result
 }
 
-pub fn roman_to_int(s: String) -> i32 {
+pub fn roman_to_int_binding(s: String) -> i32 {
     // 先弄成数字然后加起来（
     let s = s.replace("IV", "原")
                      .replace("IX", "神")
@@ -99,10 +102,10 @@ pub fn roman_to_int(s: String) -> i32 {
                      .replace("CD", "蔚")
                      .replace("CM", "来");
 
-    let bytes_array = get_bytes_array(s);
     let mut result: i32 = 0;
-    for (_, &val) in bytes_array.iter().enumerate() {
-        let val_string = val.to_string();
+
+    for char in s.chars() {
+        let val_string = char.to_string();
         let val = val_string.as_str();
         result += get_value(val);
     }

@@ -8,7 +8,6 @@ import './rainbow.css'
 import './vars.css'
 import './medium-zoom.css'
 import 'virtual:uno.css'
-import init, { roman_to_int } from "../../../wasm/output/wasm.js"
 
 export default {
   ...DefaultTheme,
@@ -17,8 +16,5 @@ export default {
     const { app, router, siteData } = ctx
     app.use(TwoslashFloatingVue)
     useMediumZoomProvider(app, router)
-    init().then(() => {
-      app.provide("romanToInt", roman_to_int)
-    })
   },
 }

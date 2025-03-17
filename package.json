@@ -10,14 +10,13 @@
   ],
   "scripts": {
     "serve": "vitepress dev contents",
-    "build": "pnpm run wasm:build && vitepress build contents && pnpm run copy",
+    "build": "vitepress build contents",
     "preview": "vitepress preview contents",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dep": "taze major",
-    "copy": "cp wasm/output contents/.vitepress/dist",
     "wasm:dev": "wasm-pack build ./wasm --target web --out-dir output",
-    "wasm:build": "asm-pack build ./wasm --release --target web --out-dir output"
+    "wasm:build": "wasm-pack build ./wasm --release --target web --out-dir output"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
@@ -32,7 +31,7 @@
     "vite": "^6.2.0",
     "vite-plugin-top-level-await": "^1.5.0",
     "vite-plugin-wasm": "^3.4.1",
-    "vitepress": "^2.0.0-alpha.3"
+    "vitepress": "2.0.0-alpha.4"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
