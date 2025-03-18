@@ -21,6 +21,10 @@ export default {
           text: '用Rust刷LeetCode',
           items: [
             {
+              text: '4.寻找两个正序数组的中位数',
+              link: '/docs/coding/leetcode/findMedianSortedArrays',
+            },
+            {
               text: '13.罗马数字转整数',
               link: '/docs/coding/leetcode/romanToInt',
             },

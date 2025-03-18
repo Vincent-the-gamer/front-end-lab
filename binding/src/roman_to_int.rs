@@ -19,7 +19,7 @@ fn get_value(s: &str) -> i32 {
     result
 }
 
-pub fn roman_to_int_binding(s: String) -> i32 {
+pub fn roman_to_int(s: String) -> i32 {
     // 先弄成数字然后加起来（
     let s = s.replace("IV", "原")
                      .replace("IX", "神")
