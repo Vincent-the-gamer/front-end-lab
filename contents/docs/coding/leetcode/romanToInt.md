@@ -119,11 +119,11 @@ pub fn roman_to_int_binding(s: String) -> i32 {
 ## 测试
 
 <p>输入罗马数字字符串：</p>
-<div>
-    <input type="text" border="1px solid black" rounded h-9 w-80
+<div block>
+    <input type="text" border="1px solid black" rounded h-9 w-60
            v-model="romanNumberStr"/>
-    <button btn h-9 ml-3 @click="romanToIntFunc">转换为数字</button>
 </div>
+<button btn h-9 mt-3 @click="romanToIntFunc">转换为数字</button>
 
 <p>结果: </p>
 

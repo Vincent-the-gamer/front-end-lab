@@ -12,6 +12,12 @@ const arr2 = ref<number[]>([2, 3, 4])
 const result = ref<number>()
 
 function getMedianNumber() {
+    if(typeof arr1.value === "string") {
+        arr1.value = arr1.value.split(",").map(i => 1 * i)
+    }
+    if(typeof arr2.value === "string") {
+        arr2.value = arr2.value.split(",").map(i => 1 * i)
+    }
     result.value = findMedianSortedArrays(arr1.value, arr2.value)
 }
 </script>
@@ -111,7 +117,7 @@ pub fn find_median_sorted_arrays(arr1: Vec<i32>, arr2: Vec<i32>) -> f64 {
            v-model="arr2"/>
 </div>
 
-<button btn h-9 ml-3 @click="getMedianNumber">计算数组合并的中位数</button>
+<button btn h-9 @click="getMedianNumber">计算数组合并的中位数</button>
 
 <p>结果: </p>
 
