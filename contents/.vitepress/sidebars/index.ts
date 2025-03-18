@@ -19,6 +19,7 @@ export default {
         },
         {
           text: '用Rust刷LeetCode',
+          link: '/docs/coding/leetcode/',
           items: [
             {
               text: '4.寻找两个正序数组的中位数',

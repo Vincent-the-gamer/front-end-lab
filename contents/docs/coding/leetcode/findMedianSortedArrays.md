@@ -45,6 +45,7 @@ LeetCode题目链接：[寻找两个正序数组的中位数](https://leetcode.c
 ```
 
 提示：
+
 - nums1.length == m
 - nums2.length == n
 - 0 <= m <= 1000
@@ -53,6 +54,7 @@ LeetCode题目链接：[寻找两个正序数组的中位数](https://leetcode.c
 - -10<sup>6</sup> <= nums1[i], nums2[i] <= 10<sup>6</sup>
 
 ## 实战
+
 ```rust
 // 拼接两个Vec
 fn concat_vecs(arr1: Vec<i32>, arr2: Vec<i32>) -> Vec<i32> {
@@ -69,7 +71,7 @@ fn partition(arr: &mut [i32]) -> usize {
     let mut i = 0;
 
     for j in 0..arr.len() - 1 {
-        if arr[j] < pivot {  
+        if arr[j] < pivot {
             arr.swap(i, j); // 小于基准的数和arr[i]交换
             i += 1;
         }
@@ -111,7 +113,7 @@ pub fn find_median_sorted_arrays(arr1: Vec<i32>, arr2: Vec<i32>) -> f64 {
 
 <p>输入两个数组：</p>
 <div flex="~ col">
-    数组1: <input type="text" border="1px solid black" rounded h-9 w-80 
+    数组1: <input type="text" border="1px solid black" rounded h-9 w-80
            v-model="arr1"/>
     数组2: <input type="text" border="1px solid black" rounded h-9 w-80
            v-model="arr2"/>

@@ -1,6 +1,6 @@
 # 用Rust刷leetcode
 
-旨在通过LeetCode编码同时训练算法思路和Rust语法。
+旨在通过LeetCode编码的同时训练算法思路和Rust语法。
 
 ## 题目：
 
